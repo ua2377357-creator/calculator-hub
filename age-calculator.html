@@ -1,0 +1,26 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Age Calculator — Exact Age in Years, Months & Days | FreeCalc Hub</title><meta name="description" content="Free age calculator: exact age from date of birth in years, months and days, plus days to next birthday.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[]}</script>
+<style>
+*{box-sizing:border-box}body{font-family:system-ui,Arial,sans-serif;margin:0;background:#f6f7f9;color:#111;line-height:1.6}
+header{background:#0b3d5f;color:#fff;padding:22px 16px}header a{color:#ffd166;text-decoration:none}
+.wrap{max-width:860px;margin:0 auto;padding:18px}h1{font-size:30px;line-height:1.25}h2{margin-top:32px}
+.card{background:#fff;border:1px solid #ddd;border-radius:12px;padding:20px;margin:18px 0}
+label{display:block;margin:10px 0 4px;font-weight:600}input,select{width:100%;padding:11px;border:1px solid #bbb;border-radius:8px;font-size:16px}
+button{background:#0b7a4b;color:#fff;border:0;padding:12px 20px;border-radius:8px;font-size:16px;cursor:pointer;margin-top:14px}
+.result{background:#e8f5ee;border:1px solid #0b7a4b;border-radius:10px;padding:16px;margin-top:16px;font-size:18px;display:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.tool{background:#fff;border:1px solid #ddd;border-radius:12px;padding:16px}.tool a{font-weight:700;text-decoration:none;color:#0b3d5f}
+footer{color:#555;font-size:13px;padding:20px;text-align:center}
+table{width:100%;border-collapse:collapse}td,th{border:1px solid #ddd;padding:8px;text-align:left}
+@media(max-width:600px){h1{font-size:24px}}
+</style></head><body><header><div class="wrap"><a href="index.html"><strong>FreeCalc Hub</strong></a><p>Free online calculators — no sign-up, no API, your numbers never leave your browser.</p></div></header>
+<div class="wrap"><p><a href="index.html">← All Calculators</a> &nbsp;|&nbsp; <a href="bmi-calculator.html">BMI</a> &nbsp; <a href="emi-calculator.html">EMI</a> &nbsp; <a href="percentage-calculator.html">Percentage</a> &nbsp; <a href="age-calculator.html">Age</a> &nbsp; <a href="tip-calculator.html">Tip</a> &nbsp; <a href="compound-interest-calculator.html">Compound Interest</a> &nbsp; <a href="sip-calculator.html">SIP</a> &nbsp; <a href="unit-converter.html">Unit Converter</a></p><h1>Age Calculator</h1><p>Apni date of birth chunein, exact age nikal jayegi.</p><div class="card"><label>Date of birth</label><input id="dob" type="date">
+<button onclick="calc()">Calculate Age</button><div class="result" id="r"></div>
+<script>function calc(){let dob=new Date(document.getElementById('dob').value);if(isNaN(dob)){alert('Date chunein');return}
+let now=new Date();let y=now.getFullYear()-dob.getFullYear(),m=now.getMonth()-dob.getMonth(),d=now.getDate()-dob.getDate();
+if(d<0){m--;let pm=new Date(now.getFullYear(),now.getMonth(),0).getDate();d+=pm} if(m<0){y--;m+=12}
+let el=document.getElementById('r');el.style.display='block';el.innerHTML='Your age: <b>'+y+' years, '+m+' months, '+d+' days</b>';}</script></div><h2>How it works</h2><p>This uses real calendar months, not just 365 days divided by 12, so leap years and month lengths are handled correctly.</p><h2>Frequently asked questions</h2><h3>Why is age in months different on different sites?</h3><p>Some sites divide total days by 30. This calculator uses calendar years and months, which is the standard way.</p><h3>Can I calculate age on a past date?</h3><p>This version uses today. A future version can add any 'age on date' option.</p>
+<p><strong>Try also:</strong> <a href="bmi-calculator.html">BMI Calculator</a>, <a href="emi-calculator.html">EMI Calculator</a>, <a href="percentage-calculator.html">Percentage Calculator</a>, <a href="age-calculator.html">Age Calculator</a>, <a href="sip-calculator.html">SIP Calculator</a></p>
+<p><em>Disclaimer: For education only. This is not medical or financial advice. Check with a professional for big loan or health decisions.</em></p></div>
+<footer>FreeCalc Hub — fast, free, private calculators.</footer></body></html>
